@@ -1,0 +1,561 @@
+/* style.css */
+/*There is only 1 external CSS file for all pages and All pages are responsive. */
+
+
+/* --------------Defining body for the index, about_us and contact_us page--------------- */
+
+#body1 {
+
+    color: white;
+    font-family:'Roboto', sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 1800px;
+    width: 100%;
+    background-image: url("../Images/Back.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* --------------Header for all pages---------------------------- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --------------Title and Logo-------------------------------- */
+.title {
+    flex-direction: column;
+    line-height: 5%;
+}
+
+#Title {
+    display: flex;
+    align-items: center;
+}
+
+#Title img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    font-weight: 'Poppins', sans-serif;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #4680ad;
+    transition: 0.3s all;
+}
+
+#contact-us-btn {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#contact-us-btn:hover {
+    background-color: #041c2f;
+    color: white;
+}
+
+/* --------------MAIN: index page ------------------- */
+
+/* Displaying flex the aside and article parts  */
+#main1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+#main1 h2 {
+    margin-top: 200px;
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 75px;
+}
+
+#main1 img {
+    width: 775px;
+    margin-left:0;
+
+}
+/*---Styling the text that is inserted in JavaScript.------*/
+#welcome_text {
+    max-width: 500px;
+    font-weight: bold;
+    color: #aef7ae;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 75px;
+    font-size: 26px;
+    line-height: 1.6;
+}
+.underline {
+    text-decoration: underline;
+}
+
+/*---- Adding animation to the image in the main section.--- */
+.logo2 {
+    animation: moveLogo 3s;
+}
+
+@keyframes moveLogo {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* --------------MAIN_2: about_us page ------------------- */
+
+#main2 {
+    padding: 0 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #071b43;
+    padding-bottom: 100px
+}
+/* ----------------------Title and text ------------------ */
+
+.our_team p{
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main2 h2 {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Sumana', sans-serif;
+    font-size: 48px;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+/* -----------------------Main2 Images  ------------------ */
+#main2 img:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    box-shadow: 0px 4px 8px rgba(249, 245, 245, 0.791);
+}
+
+.team_image,
+.our_services {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800;
+    align-items: center;
+}
+
+.team_image img {
+    width: 300px;
+    height: 250px;
+    align-self: center;
+    margin-right: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.our_services img {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    margin-right: 40px;
+}
+
+.services {
+    margin-top: 50px;
+}
+
+/* --------------------------FOOTER ------------------- */
+footer {
+    background-color: #0b0c21;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/*--------------END (Index and about_us page developed by Cindy----------------- */
+
+
+/*------------------------- MarioJump and Contact pages------------------------ */
+
+
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the game board */
+.game-board {
+    width: 100%; /* Full width */
+    height: 500px; /* Fixed height */
+    border-bottom: 15px solid rgb(35, 160, 35); /* Green border bottom */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Positioning context for absolute positioning */
+    overflow: hidden; /* Hide overflow content */
+    background: linear-gradient(#87CEEB, #E0F6FF); /* Gradient background */
+}
+
+/* Styles for the pipe */
+.pipe {
+    position: absolute; /* Position relative to the game board */
+    bottom: 0; /* Stick to the bottom */
+    width: 80px; /* Fixed width */
+    animation: pipe-animation 1.5s infinite linear; /* Apply pipe animation */
+}
+
+/* Styles for Mario */
+.mario {
+    width: 150px; /* Fixed width */
+    position: absolute; /* Position relative to the game board */
+    bottom: 0; /* Stick to the bottom */
+}
+
+/* Animation for Mario's jump */
+.jump {
+    animation: jump 500ms ease-out; /* Apply jump animation */
+}
+
+/* Styles for clouds */
+.clouds {
+    position: absolute; /* Position relative to the game board */
+    width: 550px; /* Fixed width */
+    animation: clouds-animation 20s infinite linear; /* Apply clouds animation */
+}
+
+/* Pipe animation keyframes */
+@keyframes pipe-animation {
+    from {
+        right: -80px; /* Start position */
+    }
+    to {
+        right: 100%; /* End position */
+    }
+}
+
+/* Jump animation keyframes */
+@keyframes jump {
+    0% {
+        bottom: 0; /* Initial position */
+    }
+    40% {
+        bottom: 180px; /* Jump peak */
+    }
+    50% {
+        bottom: 180px; /* Jump peak */
+    }
+    60% {
+        bottom: 180px; /* Jump peak */
+    }
+    100% {
+        bottom: 0; /* Return to initial position */
+    }
+}
+
+/* Clouds animation keyframes */
+@keyframes clouds-animation {
+    from {
+        right: -550px; /* Start position */
+    }
+    to {
+        right: 100%; /* End position */
+    }
+}
+
+ /* Hide the restart button by default */
+ #restartButton {
+    display: none;
+}
+/*------------------------- end page game----------------------------- */
+
+
+
+/* Styles for the body */
+#Mario {
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    color: white; /* Text color */
+    background-image: url('../Images/Back.jpg'); /* Background image */
+    background-size: cover; /* Cover background */
+    background-position: center center; /* Center background */
+    background-repeat: no-repeat; /* No repeat background */
+}    
+
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the header */
+.header {
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Top margin */
+    color: white; /* Text color */
+}
+
+/* Styles for the form */
+.form {
+    max-width: 500px; /* Maximum width */
+    margin: 0 auto; /* Center horizontally */
+    color: white; /* Text color */
+}
+
+/* Styles for labels */
+label {
+    display: block; /* Block display */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Styles for form inputs */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select,
+button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin-top: 5px; /* Top margin */
+    margin-bottom: 10px; /* Bottom margin */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Border radius */
+}
+
+/* Styles for radio buttons */
+input[type="radio"] {
+    margin-top: 10px; /* Top margin */
+    margin-bottom: 10px; /* Bottom margin */
+}
+
+/* Styles for buttons */
+button {
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    padding: 15px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Border radius */
+    cursor: pointer; /* Cursor pointer */
+    font-size: 16px; /* Font size */
+}
+
+/* Hover styles for buttons */
+button:hover {
+    background-color: #45a049; /* Background color on hover */
+}
+
+/* Styles for the image container */
+.imagem-container2 {
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Styles for images */
+.imgs3 img {
+    width: 100px; /* Width */
+    height: auto; /* Auto height */
+}
+
+/* Styles for the thank you message */
+.thank-you-message {
+    display: none; /* Initially hidden */
+    text-align: down; /* Text alignment */
+    color: red; /* Text color */
+    margin-top: 20px; /* Top margin */
+}
+
+
+/*--------------END (MarioJump and contact pages developed by Adriano----------------- */
+
+    #body {
+        color: white; /* Text color */
+        font-family: 'Roboto', sans-serif; /* Font family */
+        max-width: 1200px; /* Maximum width */
+        margin: 0 auto; /* Center horizontally */
+        padding: 15px; /* Padding */
+        height: 1200px; /* Height */
+        width: 100%; /* Full width */
+        background-image: url("../Images/Back.jpg"); /* Background image */
+        background-size: cover; /* Cover background */
+        background-position: center; /* Center background */
+    }
+    
+    header {
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Horizontal direction */
+        justify-content: space-between; /* Space between items */
+        align-items: center; /* Center align items vertically */
+    }
+    
+    .title {
+        flex-direction: column; /* Column direction */
+        line-height: 5%; /* Line height */
+    }
+    
+    #Title1 {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Center align items vertically */
+    }
+    
+    #Title1 img {
+        width: 50px; /* Logo width */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Margin right for spacing */
+    }
+    
+    li {
+        display: inline-block; /* Display inline-block */
+        margin: 20px; /* Margin */
+    }
+    
+    a {
+        color: white; /* Text color */
+    }
+    
+    a:hover {
+        color: #4680ad; /* Hover text color */
+        transition: 0.3s all; /* Transition effect */
+    }
+    
+    #contact-us-btn {
+        border: 2px solid white; /* Border */
+        padding: 10px; /* Padding */
+        border-radius: 15px; /* Border radius */
+    }
+    
+    #contact-us-btn:hover {
+        background-color: #041c2f; /* Background color on hover */
+        color: white; /* Text color on hover */
+    }
+       
+    /* Center align Ordered List */
+    ol {
+        text-align: center;
+        margin-top: 20px; /* Adjust as necessary */
+    }
+
+        /* Center align Title */
+        #Title1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        /* Center align Navigation */
+        nav {
+            text-align: center;
+        }
+
+        #hide, #show {
+            margin-bottom: 30px; /* Adjust as necessary */
+        }
+        
+
+ 
+  /*-------------- Media screen ---------- */
+
+   @media only screen and (max-width:760px) {
+    #body {
+        padding: 10px;
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    #Title img {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #main1 {
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-top: 50px;
+        font-size: 36px;
+    }
+
+    #main1 img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #welcome_text {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .team_image,
+    .our_services {
+        flex-direction: column;
+    }
+
+    .team_image img,
+    .our_services img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        margin: 50px;
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+/*-------------- END---------- */

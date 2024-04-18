@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+    <style>
+        /* Style for thank you message */
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+
+    <header>
+        <!-- Title and navigation section -->
+        <div id="Title">
+            <img src="../Images/logo2.jpeg.jpg" alt="Logo">
+            <h1>Code Creatorrs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="MarioJump.html">Services</a></li>
+                <li><a href="Contact.html" id="contact-us-btn">Contact us</a></li>
+            </ul>           
+        </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <form id="contactForm">
+        <div class="form">
+            <!-- Form fields -->
+            <label for="yourName">Your Name*</label>
+            <input type="text" id="yourName" name="yourName" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]{1,50}">
+
+            <label for="PhoneNumber">Your Phone Number*</label>
+            <input type="tel" id="PhoneNumber" name="PhoneNumber" required pattern="[0-9]{1,10}">
+
+            <label for="yourEmail">Your email*</label>
+            <input type="email" id="yourEmail" name="yourEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+            <label>How would you like us to contact you?</label> 
+            <input type="radio" name="contactMethod" value="Phone" required />Phone
+            <input type="radio" name="contactMethod" value="Email" required />Email <br>
+
+            <label for="Dev">Choose your Development</label>
+            <select id="Dev" name="Dev" required>
+                <option value="" disabled selected hidden>Choose a development</option>
+                <option value="Adriano">Adriano</option>
+                <option value="Cindy">Cindy</option>
+            </select>
+
+            <label for="info">Do you want to leave us any additional comments?</label><br />
+            <textarea id="info" name="info" rows="5" cols="50" required></textarea>
+
+            <input type="checkbox" name="terms" value="" required />I agree with your T&C <br/>
+            <input type="checkbox" name="newsletter" value="" />I want to subscribe to your monthly newsletters <br/>
+
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!-- Thank you message section -->
+    <div class="thank-you-message" id="thankYouMessage">
+        Thank you! We will contact you soon.
+    </div>
+
+    <!-- Image container -->
+    <div class="imagem-container2">
+        <div class="imgs3">
+            <img src="../Images/Happy.png" alt="Face" />
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- JavaScript for form submission handling -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Check if all form inputs are valid
+            const formInputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+            let isFormValid = true;
+            formInputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isFormValid = false;
+                }
+            });
+
+            // If all fields are valid, display thank you message
+            if (isFormValid) {
+                document.getElementById('thankYouMessage').style.display = 'block';
+            }
+        });
+    </script>
+
+    <footer>
+    <p> © 2024 "colocar nosso site". All rights reserved. </p>
+    <p>Designed by Adriano </p>
+    </footer>
+
+</body>
+</html>
+
+
+
+

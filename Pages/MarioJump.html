@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+    <title>Mario Jump</title>
+</head>
+<body id="Mario">
+
+    <!-- Title and Navigation -->
+    <div id="Title1">
+        <img src="../Images/logo2.jpeg.jpg" alt="Logo">
+        <h1>Code Creatorrs</h1>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="MarioJump.html">Services</a></li>
+            <li><a href="Contact.html" id="contact-us-btn">Contact us</a></li>
+        </ul>       
+    </nav>
+
+    <!-- Super Mario Music -->
+    <audio controls>
+
+        <source src="../Music/01. Above Ground BGM.mp3" type="audio/mp3" autoplay loop>
+     
+    </audio>
+
+
+
+    <!-- Game board with Mario, clouds, pipes, and restart button -->
+    <div class="game-board">
+        <img src="../Images/clouds.png" class="clouds" alt="Clouds in the sky">
+        <img src="../Images/mario.gif" class="mario" alt="Mario jumping">
+        <img src="../Images/pipe.png" class="pipe" alt="Pipe obstacle">
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <!-- JavaScript file for game functionality -->
+    <script src="../js/script.js" defer></script>
+
+
+ <!-- Ordered List -->
+ <ol>
+    <p>Commands: Use space button to jump. Don't hit the pipes. Have fun!!!</p>
+   </ol>
+   
+   <button id="hide">Hide</button>
+   <button id="show">Show</button><br>
+
+   <footer>
+    <p> © 2024 "colocar nosso site". All rights reserved. </p>
+    <p>Designed by Adriano </p>
+   </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
