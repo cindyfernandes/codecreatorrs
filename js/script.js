@@ -36,8 +36,15 @@ const restartGame = () => {
     gameLoop = setInterval(loop, 10); // Restarts the game loop
 };
 
-document.addEventListener('keydown', jump); // Listens for keydown events to make Mario jump
-restartButton.addEventListener('click', restartGame); // Listens for click events on the restart button
+// Add event listeners for touch events and keyboard events to make Mario jump
+document.addEventListener('touchstart', jump);
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 32) { // Check if the space key is pressed
+        jump();
+    }
+});
+
+restartButton.addEventListener('click', restartGame); // Adds an event listener for click events on the restart button
 
 // Start game loop
 gameLoop = setInterval(loop, 10); // Starts the game loop
